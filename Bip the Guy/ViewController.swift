@@ -19,7 +19,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("view.frame = \(view.frame)")
+//        print("view.frame = \(view.frame)")
 
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -58,7 +58,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         
         ImageToPunch.image = selectedImage
